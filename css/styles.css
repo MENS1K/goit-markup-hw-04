@@ -14,6 +14,7 @@
   --card-set-gap: 30px;
   --padding-portfolio: 24px;
   --padding-section: 94px;
+  --social-link-fill: #afb1b8;
 }
 p,
 h1,
@@ -112,8 +113,7 @@ body {
 /* .header-item {
   background-color: orange;
 } */
-.site-nav .header-item + .header-item,
-.header-info .header-item + .header-item {
+.site-nav .header-item + .header-item {
   margin-left: 50px;
 }
 
@@ -124,7 +124,6 @@ body {
   display: flex;
   margin-left: auto;
 }
-
 .info-link {
   display: block;
   padding-top: 32px;
@@ -135,7 +134,16 @@ body {
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: var(--primary-text-color);
+  display: flex;
+  fill: currentColor;
 }
+.icon-contact {
+  margin-right: 10px;
+}
+.tel {
+  margin-left: 30px;
+}
+
 .site-nav .link:hover,
 .site-nav .link:focus,
 .info-link:hover,
@@ -150,6 +158,13 @@ body {
 .hero-section {
   padding-top: 200px;
   padding-bottom: 200px;
+  max-width: 1600px;
+  height: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url('../images/hero.jpg');
+  background-repeat: no-repeat;
 }
 .hero-title {
   font-weight: 900;
@@ -177,6 +192,7 @@ body {
   padding: 10px 32px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
+  border: none;
 }
 .hero-btn:hover,
 .hero-btn:focus {
@@ -195,6 +211,16 @@ body {
 }
 .benefits-list .benefits-item + .benefits-item {
   margin-left: 30px;
+}
+.thumb {
+  width: 270px;
+  height: 120px;
+  background: #f5f4fa;
+  border-radius: 4px;
+  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .benefits-caption {
@@ -278,6 +304,48 @@ body {
   margin-top: 10px;
 }
 
+/* Постоянные клиенты */
+.client {
+  padding-top: var(--padding-section);
+  padding-bottom: var(--padding-section);
+}
+.client-title {
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+  letter-spacing: 0.03em;
+  margin-bottom: 50px;
+
+  color: #212121;
+}
+.client-list {
+  display: flex;
+  justify-content: center;
+}
+.client-item {
+  display: flex;
+}
+.client-item:not(:last-child) {
+  margin-right: 50px;
+}
+.client-link {
+  display: flex;
+  width: 170px;
+  height: 92px;
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+  box-sizing: border-box;
+  fill: var(--social-link-fill);
+  align-items: center;
+  justify-content: center;
+}
+.client-link:hover,
+.client-link:focus {
+  border-color: var(--accent-color);
+  fill: var(--accent-color);
+  outline: none;
+}
+
 /* Footer */
 .footer {
   padding-top: 60px;
@@ -314,6 +382,38 @@ body {
 .footer-info-link:focus {
   color: var(--accent-color);
 }
+.footer-soc-link {
+  margin-left: 70px;
+  margin-top: 12px;
+}
+.soc-link-title {
+  font-size: 14px;
+  line-height: 1.45;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  display: flex;
+
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+.soc-link-list {
+  display: flex;
+  justify-content: center;
+}
+
+.soc-link-item:not(:last-child) {
+  margin-right: 10px;
+}
+.soc-link {
+  width: 44px;
+  height: 44px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  fill: #ffffff;
+}
 
 /* Portfolio */
 .main-section {
@@ -331,8 +431,6 @@ body {
 .main-btn {
   padding: 6px 22px;
   border-radius: 4px;
-  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
-    0px 2px 2px rgba(0, 0, 0, 0.12);
   border: 0;
   font-family: 'Roboto', sans-serif;
   font-weight: 500;
@@ -349,12 +447,19 @@ body {
 .main-btn.current {
   color: var(--second-title-color);
   background-color: var(--accent-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 .main-content-list {
   display: flex;
   flex-wrap: wrap;
   margin-left: -30px;
   margin-bottom: -30px;
+}
+.main-content-item:hover,
+.main-content-item:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 .content-wrap {
   padding-top: 20px;
